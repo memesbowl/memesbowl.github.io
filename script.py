@@ -28,7 +28,9 @@ g = y.game.Game(oauth, "nfl")
 leagueID = g.league_ids()[3]
 l = y.league.League(oauth, leagueID)
 standings = l.standings()
-current_week = l.current_week()
+current_week = l.current_week() 
+if current_week == 1:
+    current_week = 2
 
 print("running sync")
 
@@ -44,7 +46,7 @@ for v in standings:
 
 scoreboard = {}
 # For each week
-for week in range(1, current_week + 1):
+for week in range(1, current_week):
     matchup = l.matchups(week)
     weeks_matchups = matchup["fantasy_content"]["league"][1]["scoreboard"]["0"][
         "matchups"
@@ -104,8 +106,8 @@ s = [
 ]
 
 table = tabulate.tabulate([x.values() for x in s], s[0].keys(), tablefmt="html")
-weeks_median = statistics.median(scoreboard[current_week -1].values())
-weeks_max    = max(scoreboard[current_week - 1].items(), key = lambda k :k[1])
+weeks_median = statistics.median(scoreboard[current_week - 2].values())
+weeks_max    = max(scoreboard[current_week - 2].items(), key = lambda k :k[1])
 max_score = teams[weeks_max[0]]['name'] + ' ' f'{weeks_max[1]:3.2f}'
 data = {'table': table, 'median': f'{weeks_median:3.2f}', 'max': max_score, 'max_flex': winning_team + ' ' + flex_player + ' ' + f'{max_flex:3.2f}'}
 
