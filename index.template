@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<img src="images/header.gif" class="center" />
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h2>Weekly Median: $median</h2>
+		<h2>Weekly Winner: $max</h2>
+		<div class="container">
+			<div class="column column-one">
+				<img src="images/left.jpg" />
+			</div>
+			<div class="column column-two">
+			$table
+		</div>
+		<div class="column column-three">
+				<img src="images/right.png" />
+    </div>
+	
+	</body>
+</html>
