@@ -1,6 +1,6 @@
 #!/bin/bash
-cd /home/ian/code/memesbowl.github.io-master
-/usr/bin/python /home/ian/code/memesbowl.github.io-master/script.py
+cd /home/ihrm/memesbowl.github.io
+python /home/ihrm/memesbowl.github.io/script.py
 git add .
 git commit -m "publish"
 git push
