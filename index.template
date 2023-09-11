@@ -6,7 +6,8 @@
 	</head>
 	<body>
 		<h2>Weekly Median: $median</h2>
-		<h2>Weekly Winner: $max</h2>
+		<h2>Most Points: $max</h2>
+		<h2>Flex Winner: $max_flex</h2>
 		<div class="container">
 			<div class="column column-one">
 				<img src="images/left.jpg" />
