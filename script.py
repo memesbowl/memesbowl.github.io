@@ -89,7 +89,7 @@ max_flex = 0
 winning_team = ''
 flex_player = ''
 for team_id, t in teams.items():
-    roster = t['team'].roster();
+    roster = t['team'].roster(week=current_week - 1);
     for player in roster:
         if player['selected_position'] == 'W/R/T':
             points = calc_scores(player['player_id'], current_week - 1)
