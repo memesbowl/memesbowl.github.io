@@ -28,7 +28,7 @@ g = y.game.Game(oauth, "nfl")
 leagueID = g.league_ids()[3]
 l = y.league.League(oauth, leagueID)
 standings = l.standings()
-current_week = l.current_week() 
+current_week = l.current_week() + 1
 if current_week == 1:
     current_week = 2
 
